@@ -1,5 +1,9 @@
 "use client";
 
+import { PostOwner } from "@/components/PostOwner";
+import { Comment } from "@/components/Comment";
+import { comments } from "@/libs/comments";
+
 export default function HomePage() {
   return (
     <div
@@ -12,17 +16,17 @@ export default function HomePage() {
         className="mx-auto p-3 rounded rounded-3 shadow-sm"
       >
         {/* Post Owner Example*/}
-        <div className="vstack gap-3">
+        <div className="vstack gap-3" >
           <div className="d-flex align-items-center gap-3">
             <img
-              src="/profileImages/handsome.jpg"
+              src="/profileImages/photo.jpg"
               width="48"
               height="48"
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
-            <span className="fw-semibold fs-5 text-white">
-              Chayanin Suatap 650610560
+            <span className="fw-semibold fs-5 text-white" >
+              <PostOwner name ="Penpicha Thongkham" id = "650610795"/>
             </span>
           </div>
 
@@ -37,6 +41,7 @@ export default function HomePage() {
           <hr className="m-0 border" />
         </div>
 
+        
         {/* Comment Example */}
         <div className="d-flex gap-2 my-2">
           <img
@@ -51,7 +56,7 @@ export default function HomePage() {
             style={{ backgroundColor: "#3A3B3C" }}
           >
             <span className="fw-semibold" style={{ color: "#E4E6EB" }}>
-              Lisa
+              <Comment username = "Lisa"></Comment>
             </span>
             <br />
             <span style={{ color: "#E4E6EB" }}>จริงค่า</span>
@@ -88,6 +93,7 @@ export default function HomePage() {
         </div>
 
         {/* map-loop render Comment component here */}
+        
       </div>
     </div>
   );

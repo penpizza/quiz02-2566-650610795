@@ -1,14 +1,17 @@
-export const Comment = ({
+import { comments } from "@/libs/comments";
+
+
+export const Comment = (
   userImagePath,
   username,
   commentText,
   likeNum,
-  replies,
-}) => {
+  replies,) => {
   return (
     <div>
-      your code here...
+      
       {/* map-loop render Reply component here */}
+      
     </div>
   );
 };
