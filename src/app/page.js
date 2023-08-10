@@ -56,7 +56,7 @@ export default function HomePage() {
             style={{ backgroundColor: "#3A3B3C" }}
           >
             <span className="fw-semibold" style={{ color: "#E4E6EB" }}>
-              <Comment username = "Lisa"></Comment>
+              Lisa
             </span>
             <br />
             <span style={{ color: "#E4E6EB" }}>จริงค่า</span>
@@ -93,7 +93,15 @@ export default function HomePage() {
         </div>
 
         {/* map-loop render Comment component here */}
-        
+        {comments.map((comment) => (
+          <Comment
+            key = {comment.username}
+            username={comment.username}
+            userImagePath={comment.userImagePath}
+            commentText={comment.commentText}
+            likeNum={comment.likeNum}
+          />
+        ))}
       </div>
     </div>
   );

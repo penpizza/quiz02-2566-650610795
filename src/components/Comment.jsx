@@ -11,7 +11,16 @@ export const Comment = (
     <div>
       
       {/* map-loop render Reply component here */}
-      
+      {comments.map((comment) => (
+          <comment
+            key = {comment.username}
+            username={comment.username}
+            userImagePath={comment.userImagePath}
+            commentText={comment.commentText}
+            likeNum={comment.likeNum}
+            replies={comment.replies}
+          />
+        ))}
     </div>
   );
 };
